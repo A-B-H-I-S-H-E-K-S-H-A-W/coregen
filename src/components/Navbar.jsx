@@ -18,7 +18,7 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className="border-b w-full h-16 px-6 sm:px-10">
+      <nav className="border-b w-full h-16 px-4 sm:px-10">
         <header className="flex justify-between items-center h-16">
           <div className="flex items-center gap-10">
             <span className="font-bold text-lg">Coregen</span>
@@ -53,7 +53,6 @@ const Navbar = () => {
 
       {menuState && (
         <div className="fixed inset-0 z-50">
-
           <div
             className="absolute inset-0 bg-background/10 backdrop-blur-xs"
             onClick={() => setMenuState(false)}

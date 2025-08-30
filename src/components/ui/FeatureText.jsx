@@ -6,7 +6,7 @@ export function FeatureText() {
     <div className="z-10 flex pb-2 items-center justify-center">
       <div
         className={cn(
-          "group rounded-full border bg-foreground/10 text-base text-foreground transition-all ease-in hover:cursor-pointer dark:bg-background"
+          "group rounded-full border-2 bg-foreground/10 md:text-base text-xs text-foreground transition-all ease-in hover:cursor-pointer dark:bg-background"
         )}
       >
         <div className="inline-flex items-center justify-center px-4 py-1 transition ease-out hover:text-foreground/70 hover:duration-300">

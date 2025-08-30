@@ -1,17 +1,28 @@
 import { FeatureText } from "@/components/ui/FeatureText";
 import "../styles/globals.css";
+import { Button } from "@/components/ui/button";
 
 export default function Home() {
   return (
     <>
-      <section className="min-h-screen bg-gradient-to-bl from-background via-background to-primary/60 px-20">
-        <div className="pt-28 max-w-4xl text-center mx-auto">
+      <section className="min-h-screen bg-gradient-to-bl from-background via-background to-primary/60 md:px-20 px-2">
+        <div className="pt-20 md:max-w-4xl w-full text-center mx-auto">
           <div>
             <FeatureText />
             <h1 className="h1">
-              Bootstrap your website pages with{" "}
-              <span className="text-primary">Coregen</span>
+              Bootstrap your website and backend together with Coregen
             </h1>
+          </div>
+          <div className="mt-8 max-w-2xl mx-auto">
+            <p className="p">
+              A full-stack generator that lets developers instantly scaffold
+              landing pages and backend APIs through a simple CLI — build
+              beautiful frontends and powerful backends with ease.
+            </p>
+          </div>
+          <div className="mt-8">
+            <Button>Get Started</Button>
+            <Button variant={"ghost"}>View Services</Button>
           </div>
         </div>
       </section>
