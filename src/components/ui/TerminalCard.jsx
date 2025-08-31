@@ -4,7 +4,7 @@ export function TerminalCard() {
   return (
     <div className="w-full h-full flex items-center justify-center">
       <Terminal>
-        <TypingAnimation>
+        <TypingAnimation className={"dark:text-foreground text-background"}>
           &gt; npx coregen@latest init fullstack
         </TypingAnimation>
 
