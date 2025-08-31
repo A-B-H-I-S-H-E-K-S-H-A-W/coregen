@@ -21,12 +21,14 @@ const Navbar = () => {
       <nav className="fixed top-0 left-0 z-50 bg-background border-b w-full h-16 px-4 sm:px-10">
         <header className="flex justify-between items-center h-16">
           <div className="flex items-center gap-10">
-            <span className="font-bold text-lg">Coregen</span>
+            <Link className="font-bold text-lg" href={"/"}>
+              Coregen
+            </Link>
             <ul className="hidden md:flex flex-row">
               {navLinks.map(({ id, title, link }) => (
                 <li key={id}>
                   <Link href={link}>
-                    <Button size="default" variant="ghost">
+                    <Button size="sm" variant="ghost">
                       {title}
                     </Button>
                   </Link>
