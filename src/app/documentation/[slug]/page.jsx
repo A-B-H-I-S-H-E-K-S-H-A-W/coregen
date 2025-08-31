@@ -1,8 +1,8 @@
 import docs from "@/data";
 import DocumentationLayout from "../_layout";
 
-export default function DocPage({ params }) {
-  const { slug } = params;
+export default async function DocPage({ params }) {
+  const { slug } = await params;
   const allDocs = docs.flatMap((section) => section.items);
   const doc = allDocs.find((d) => d.slug === slug);
 
