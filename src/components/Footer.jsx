@@ -4,7 +4,7 @@ import React from "react";
 const Footer = () => {
   return (
     <>
-      <footer className="h-20 border-t">
+      <footer className="sticky top-0 left-0 bg-background w-full h-20 border-t">
         <div className="flex justify-center items-center h-20">
           <p className="p">
             Made by{" "}
