@@ -7,7 +7,7 @@ import { ThemeToggler } from "./ui/ThemeToggeler";
 import { SidebarIcon, X } from "lucide-react";
 
 const navLinks = [
-  { id: 1, title: "Docs", link: "/" },
+  { id: 1, title: "Docs", link: "/documentation" },
   { id: 2, title: "Components", link: "/" },
   { id: 3, title: "API Endpoints", link: "/" },
   { id: 4, title: "Theme", link: "/" },
@@ -18,7 +18,7 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className="border-b w-full h-16 px-4 sm:px-10">
+      <nav className="fixed top-0 left-0 z-50 bg-background border-b w-full h-16 px-4 sm:px-10">
         <header className="flex justify-between items-center h-16">
           <div className="flex items-center gap-10">
             <span className="font-bold text-lg">Coregen</span>
