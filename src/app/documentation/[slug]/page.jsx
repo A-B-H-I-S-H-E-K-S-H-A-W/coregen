@@ -1,5 +1,6 @@
 import docs from "@/data";
 import DocumentationLayout from "../_layout";
+import { ScriptCopyBtn } from "@/components/other/Script";
 
 export default async function DocPage({ params }) {
   const { slug } = await params;
@@ -17,7 +18,16 @@ export default async function DocPage({ params }) {
           {/* Content */}
           <div>
             <h1 className="text-3xl font-bold">{doc.title}</h1>
-            <div className="prose mt-4 whitespace-pre-line">{doc.content}</div>
+            <div className="prose mt-4 whitespace-pre-line">{doc.content}</div>\
+            {doc.command && (
+              <ScriptCopyBtn
+                showMultiplePackageOptions={true}
+                codeLanguage="shell"
+                lightTheme="nord"
+                darkTheme="vitesse-dark"
+                commandMap={doc?.command}
+              />
+            )}
           </div>
         </div>
       </DocumentationLayout>

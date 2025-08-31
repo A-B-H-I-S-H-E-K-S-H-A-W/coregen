@@ -9,6 +9,9 @@ const docs = [
           Welcome to the CLI tool! 🚀
           Run \`npx mycli init\` to start.
         `,
+        command: {
+          npm: "npm run dev",
+        },
       },
       {
         slug: "installation",
