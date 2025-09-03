@@ -14,7 +14,7 @@ const Footer = () => {
               href="https://abhishek-work.vercel.app/"
             >
               Abhishek Shaw.
-            </Link>
+            </Link>{" "}
             Find me on{" "}
             <Link
               target="_blank"

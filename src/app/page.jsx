@@ -2,11 +2,11 @@
 import { FeatureText } from "@/components/ui/FeatureText";
 import "../styles/globals.css";
 import { Button } from "@/components/ui/button";
-import { TerminalCard } from "@/components/ui/TerminalCard";
+import { ResizableContainer } from "@/components/ResizeableContainer";
 
 export default function Home() {
   return (
-    <section className="min-h-screen bg-gradient-to-bl from-background via-background to-primary/80 md:px-20 px-2 py-10">
+    <section className="min-h-screen bg-background md:px-20 px-2 py-10">
       <div className="pt-24 md:max-w-4xl w-full text-center mx-auto">
         <FeatureText />
         <h1 className="h1">
@@ -25,7 +25,7 @@ export default function Home() {
         </div>
       </div>
       <div className="mt-12">
-        <TerminalCard/>
+        <ResizableContainer></ResizableContainer>
       </div>
     </section>
   );
