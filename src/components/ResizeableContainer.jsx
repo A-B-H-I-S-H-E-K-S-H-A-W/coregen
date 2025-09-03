@@ -46,7 +46,7 @@ export function ResizableContainer({
         direction="horizontal"
         className="rounded-b-lg border md:min-w-[350px] max-w-full"
       >
-        <ResizablePanel defaultSize={95} minSize={25}>
+        <ResizablePanel defaultSize={97} minSize={25}>
           <div className="h-[80vh] w-full overflow-hidden bg-background">
             <div className="h-full w-full overflow-y-auto">
               <div className="min-h-full">{children}</div>
@@ -54,7 +54,7 @@ export function ResizableContainer({
           </div>
         </ResizablePanel>
         <ResizableHandle withHandle />
-        <ResizablePanel defaultSize={5}></ResizablePanel>
+        <ResizablePanel defaultSize={3}></ResizablePanel>
       </ResizablePanelGroup>
     </div>
   );

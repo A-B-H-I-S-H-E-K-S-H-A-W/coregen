@@ -25,11 +25,11 @@ export default function Home() {
         </div>
       </div>
       <div className="mt-12">
-        {blocks.map(({ id, command, title }) => (
+        {blocks.map(({ id, command, title, iframeSrc }) => (
           <ResizableContainer key={id} command={command} title={title}>
             <div className="h-[80vh] w-full overflow-hidden bg-background">
               <iframe
-                src="/hero-1"
+                src={iframeSrc}
                 className="h-full w-full border-0"
                 title="Responsive Preview"
               />
