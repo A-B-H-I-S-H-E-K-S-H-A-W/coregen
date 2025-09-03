@@ -1,8 +1,8 @@
 "use client";
 import { FeatureText } from "@/components/ui/FeatureText";
-import "../styles/globals.css";
 import { Button } from "@/components/ui/button";
 import { ResizableContainer } from "@/components/ResizeableContainer";
+import { blocks } from "@/data/blocks";
 
 export default function Home() {
   return (
@@ -25,7 +25,17 @@ export default function Home() {
         </div>
       </div>
       <div className="mt-12">
-        <ResizableContainer></ResizableContainer>
+        {blocks.map(({ id, command, title }) => (
+          <ResizableContainer key={id} command={command} title={title}>
+            <div className="h-[80vh] w-full overflow-hidden bg-background">
+              <iframe
+                src="/hero-1"
+                className="h-full w-full border-0"
+                title="Responsive Preview"
+              />
+            </div>
+          </ResizableContainer>
+        ))}
       </div>
     </section>
   );

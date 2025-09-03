@@ -25,30 +25,37 @@ export function ResizableContainer({
   };
 
   return (
-    <>
-      <div className="h-12 w-full border rounded-t-lg flex items-center justify-between text-sm px-5">
-        <div className="">
-          <p>{title}</p>
-        </div>
+    <div className="flex flex-col items-center justify-center">
+      {/* Top bar with copy button */}
+      <div className="h-12 w-full border rounded-t-lg flex items-center justify-between text-sm px-5 bg-muted">
+        <p>{title}</p>
         <div className="flex items-center gap-4">
-          <div>
-            <p className="text-sm">{command}</p>
-          </div>
-          <div>
-            <Button onClick={handleCopy} size={"sm"}>
-              {isCopy ? <Check /> : <Copy />}
-            </Button>
-          </div>
+          <p className="text-sm font-mono">{command}</p>
+          <Button onClick={handleCopy} size="sm" variant="outline">
+            {isCopy ? (
+              <Check className="w-4 h-4" />
+            ) : (
+              <Copy className="w-4 h-4" />
+            )}
+          </Button>
         </div>
       </div>
+
+      {/* Resizable preview */}
       <ResizablePanelGroup
         direction="horizontal"
-        className="min-h-screen max-w-full rounded-b-lg border md:min-w-[450px]"
+        className="rounded-b-lg border md:min-w-[350px] max-w-full"
       >
-        <ResizablePanel defaultSize={95}>{children}</ResizablePanel>
+        <ResizablePanel defaultSize={95} minSize={25}>
+          <div className="h-[80vh] w-full overflow-hidden bg-background">
+            <div className="h-full w-full overflow-y-auto">
+              <div className="min-h-full">{children}</div>
+            </div>
+          </div>
+        </ResizablePanel>
         <ResizableHandle withHandle />
         <ResizablePanel defaultSize={5}></ResizablePanel>
       </ResizablePanelGroup>
-    </>
+    </div>
   );
 }
